@@ -1,6 +1,6 @@
 <?php
 
-class OpenGraphExtension extends DataExtension {
+class OpenGraphExtension extends Extension {
 
     public static $keys = array(
         'title',
@@ -53,21 +53,21 @@ class OpenGraphExtension extends DataExtension {
     
     public function getOpenGraph_image_height() {
         $im = $this->owner->getOpenGraphImage();
-        if($im) {
+        if($im && $im->exists()) {
             return $im->Height;
         }
     }
     
     public function getOpenGraph_image_width() {
         $im = $this->owner->getOpenGraphImage();
-        if($im) {
+        if($im && $im->exists()) {
             return $im->Width;
         }
     }
     
     public function getOpenGraph_image() {
         $im = $this->owner->getOpenGraphImage();
-        if($im) {
+        if($im && $im->exists()) {
             return $this->getCanonicalURL($im->URL);
         }
     }
