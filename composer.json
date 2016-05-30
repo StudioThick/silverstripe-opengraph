@@ -1,0 +1,19 @@
+{
+   "name": "studiothick/silverstripe-opengraph",
+   "description": "Automatically generates Open Graph data for a Silverstripe page.",
+   "type": "silverstripe-module",
+   "homepage": "http://github.com/StudioThick/silverstripe-opengraph",
+   "keywords": ["silverstripe", "opengraph"],
+   "license": "MIT",
+   "authors": [
+        { "name": "Tom McLean", "email": "tom.mclean@studiothick.com" }
+    ],
+   "support": { 
+        "issues": "http://github.com/StudioThick/silverstripe-opengraph/issues"
+   },
+   "require": { 
+        "silverstripe/framework": "^3.1",
+        "composer/installers": "*"
+   },
+   "extra": { }
+}
