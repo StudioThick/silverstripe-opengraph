@@ -1,6 +1,6 @@
 <?php
 
-class OpenGraphExtension extends Extension {
+class OpenGraphExtension extends DataExtension {
 
     public static $keys = array(
         'title',
