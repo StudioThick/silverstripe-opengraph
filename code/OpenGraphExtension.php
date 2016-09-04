@@ -102,8 +102,9 @@ class OpenGraphExtension extends DataExtension {
         foreach(OpenGraphExtension::$keys as $k) {
             $key = str_replace(':', '_', $k);
             $action = "getOpenGraph_$key";
-            $val = Convert::raw2att($this->owner->$action());
+            $val = $this->owner->$action();
             if($val) {
+                $val = Convert::raw2att($val);
                 $tags .= "<meta name=\"og:$k\" content=\"$val\" />\n";
             }
         }
