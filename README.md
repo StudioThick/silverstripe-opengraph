@@ -9,7 +9,7 @@ attributes.
 
 - `og:title`: from `$Title`
 - `og:type`: hardcoded to `"website"`
-- `og:image`: absolute URL. tries `$HeroImage`, `$PostImage`, then `$Image`
+- `og:image`: absolute URL. tries `$HeroImage`, `$PostImage`, `$Image`, then `$FeaturedImage`
 - `og:image:width`: width, as `og:image`
 - `og:image:height`: height, as `og:image`
 - `og:url`: absolute URL of page (`Director::protocolAndHost() . $this->Link`)
