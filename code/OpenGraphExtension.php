@@ -41,7 +41,7 @@ class OpenGraphExtension extends DataExtension {
 
     public function getOpenGraphImage() {
         $page = $this->owner->data();
-        $tries = array('HeroImage', 'PostImage', 'Image');
+        $tries = array('HeroImage', 'PostImage', 'Image', 'FeaturedImage');
         foreach($tries as $t) {
             $i = $page->hasOneComponent($t);
             if($i) {
@@ -104,6 +104,7 @@ class OpenGraphExtension extends DataExtension {
             $action = "getOpenGraph_$key";
             $val = $this->owner->$action();
             if($val) {
+                $val = Convert::raw2att($val);
                 $tags .= "<meta property=\"og:$k\" content=\"$val\" />\n";
             }
         }
