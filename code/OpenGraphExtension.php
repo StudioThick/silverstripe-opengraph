@@ -104,7 +104,7 @@ class OpenGraphExtension extends DataExtension {
             $action = "getOpenGraph_$key";
             $val = $this->owner->$action();
             if($val) {
-                $tags .= "<meta name=\"og:$k\" content=\"$val\" />\n";
+                $tags .= "<meta property=\"og:$k\" content=\"$val\" />\n";
             }
         }
         return $tags;
